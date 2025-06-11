@@ -1285,7 +1285,7 @@ void PopupMenu::_notification(int p_what) {
 			popup_time_msec = OS::get_singleton()->get_ticks_msec();
 			initial_button_mask = Input::get_singleton()->get_mouse_button_mask();
 			during_grabbed_click = (bool)initial_button_mask;
-			/*
+
 			Size2 scale = get_parent_viewport()->get_popup_base_transform().get_scale();
 			CanvasItem *c = Object::cast_to<CanvasItem>(get_parent());
 			if (c) {
@@ -1297,7 +1297,6 @@ void PopupMenu::_notification(int p_what) {
 			minsize.height = Math::ceil(minsize.height); // Ensures enough height at fractional content scales to prevent the v_scroll_bar from showing.
 			set_min_size(minsize); // `height` is truncated here by the cast to Size2i for Window.min_size.
 			set_size(Vector2(0, 0)); // Shrinkwraps to min size.
-			*/
 		} break;
 
 		case NOTIFICATION_INTERNAL_PROCESS: {
